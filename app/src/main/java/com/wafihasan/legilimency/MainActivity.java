@@ -16,12 +16,14 @@ public class MainActivity extends AppCompatActivity
     String t = "To it.";
     int c = 0;
     int j = 0;
+
     public int random()
     {
         Random r = new Random();
         int n = r.nextInt(51)*2;
         return n;
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -74,7 +76,6 @@ public class MainActivity extends AppCompatActivity
                     c += 1;
                 }
             }
-
         });
     }
 }
