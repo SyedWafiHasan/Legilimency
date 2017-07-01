@@ -1,8 +1,14 @@
 package com.wafihasan.legilimency;
 
+import android.content.DialogInterface;
 import android.graphics.Typeface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -47,6 +53,9 @@ public class MainActivity extends AppCompatActivity
         tv3.setTypeface(less);
         tv4.setTypeface(less);
 
+        Toolbar tb = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+
         LinearLayout lin = (LinearLayout)findViewById(R.id.lin);
         lin.setOnClickListener(new View.OnClickListener()
         {
@@ -77,5 +86,36 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater mi = getMenuInflater();
+        mi.inflate(R.menu.mymenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this);
+        if(item.getItemId() == R.id.about)
+        {
+            ad.setIcon(R.mipmap.ic_launcher);
+            ad.setTitle("About The Developer");
+            ad.setMessage("Developed by Wafi Hasan.\nA student and tech enthusiast.");
+            AlertDialog ad1 = ad.create();
+            ad1.show();
+        }
+        else if(item.getItemId() == R.id.contact)
+        {
+            ad.setIcon(R.mipmap.ic_launcher);
+            ad.setTitle("Contact the Developer");
+            ad.setMessage("You can reach the developer at :\n\nfacebook.com/syedwafihasan\n\ninstagram.com/syedwafihasan\n\nsyedwafihasan@gmail.com\n\n+918299841298\n\n+917071769357");
+            AlertDialog ad1 = ad.create();
+            ad1.show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
