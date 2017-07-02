@@ -4,4 +4,18 @@
     <string name="action_settings">Settings</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="about_the_developer">About The Developer</string>
+    <string name="start">Click to start</string>
+    <string name="click_continue">Click to continue</string>
+    <string name="number_mind">The number in your mind is</string>
+    <string name="try_again">Click to try again</string>
+    <string name="student">Developed by Wafi Hasan.\nA student and tech enthusiast.</string>
+    <string name="to_it">To it.</string>
+    <string name="contact_the_developer">Contact The Developer</string>
+    <string name="insta_link">instagram.com/p/BWDorHrgieU/</string>
+    <string name="fb_link">facebook.com/syedwafihasan</string>
+    <string name="you_can_contact_the_developer_at">You can contact the developer at :</string>
+    <string name="email_id">syedwafihasan@gmail.com</string>
+    <string name="contact_the_dev">Contact The Dev</string>
+    <string name="about_the_dev">About The Dev</string>
 </resources>

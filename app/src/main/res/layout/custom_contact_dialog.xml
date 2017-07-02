@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#f3ebdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription"/>
+    <TextView
+        android:id="@+id/contact_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="@string/contact_the_developer"
+        android:textSize="20sp"
+        android:textColor="#7d5642"/>
+
+    <TextView
+        android:id="@+id/actual_text_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#aa4b41"
+        android:layout_marginTop="20dp"
+        android:text="@string/you_can_contact_the_developer_at" />
+
+    <TextView
+        android:id="@+id/fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#aa4b41"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:text="@string/fb_link" />
+
+    <TextView
+        android:id="@+id/insta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#aa4b41"
+        android:layout_marginTop="5dp"
+        android:autoLink="web"
+        android:text="@string/insta_link" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#aa4b41"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="16dp"
+        android:autoLink="email"
+        android:text="@string/email_id" />
+
+</LinearLayout>
