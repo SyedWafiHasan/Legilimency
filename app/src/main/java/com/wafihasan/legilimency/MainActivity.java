@@ -14,10 +14,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 import java.util.Random;
 
+//App ID: ca-app-pub-2397811954559570~3394579648
+//Ad unit ID: ca-app-pub-2397811954559570/7182306440
 public class MainActivity extends AppCompatActivity
 {
+    InterstitialAd ad;
     String []a = {"Think of a number", "Double it", "Add","Divide it by 2", "Subtract the original number"};
     int x = a.length;
     String t = "To it";
@@ -35,6 +41,9 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ad = new InterstitialAd(this);
+        ad.setAdUnitId("ca-app-pub-2397811954559570/7182306440");
 
         final TextView tv1 = (TextView)findViewById(R.id.tv1);
         final TextView tv2 = (TextView)findViewById(R.id.tv2);
@@ -76,6 +85,8 @@ public class MainActivity extends AppCompatActivity
                     tv1.setText(R.string.number_mind);
                     tv3.setText(Integer.toString((j/2)));
                     tv2.setText(R.string.try_again);
+                    ad.loadAd(new AdRequest.Builder().build());
+                    ad.show();
                 }
                 else
                 {
@@ -83,6 +94,7 @@ public class MainActivity extends AppCompatActivity
                     tv3.setText("");
                     tv4.setText("");
                     c += 1;
+
                 }
             }
         });
@@ -141,7 +153,9 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void onClick(View v)
                 {
-                    Toast.makeText(MainActivity.this, "Instagram doesn't support opening profiles directly. Only posts. You can click my name on the top to contact me.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Instagram doesn't support opening profiles directly." +
+                            " Only posts.\nYou can click my name on the top to contact me.",
+                            Toast.LENGTH_LONG).show();
                 }
             });
 
